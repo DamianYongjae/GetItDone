@@ -19,6 +19,8 @@
 		2D4C49A020D5B53D0007B828 /* Raleway-v4020-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D4C499F20D5B53D0007B828 /* Raleway-v4020-SemiBold.otf */; };
 		2D4C49A220D5BED40007B828 /* GDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4C49A120D5BED40007B828 /* GDButton.swift */; };
 		2D4C49A420D5C5710007B828 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4C49A320D5C5710007B828 /* ListController.swift */; };
+		2D4C49A620D5C70B0007B828 /* GDHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4C49A520D5C70B0007B828 /* GDHeaderView.swift */; };
+		2D4C49A920D5CE2E0007B828 /* optionset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4C49A820D5CE2E0007B828 /* optionset.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		2D4C499F20D5B53D0007B828 /* Raleway-v4020-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-v4020-SemiBold.otf"; sourceTree = "<group>"; };
 		2D4C49A120D5BED40007B828 /* GDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDButton.swift; sourceTree = "<group>"; };
 		2D4C49A320D5C5710007B828 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		2D4C49A520D5C70B0007B828 /* GDHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDHeaderView.swift; sourceTree = "<group>"; };
+		2D4C49A820D5CE2E0007B828 /* optionset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = optionset.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,16 +72,15 @@
 		2D1A3EAD20D14FCC003F1ABB /* GetItDone */ = {
 			isa = PBXGroup;
 			children = (
-				2D4C499C20D5B2720007B828 /* fonts */,
-				2D4C499920D5AF560007B828 /* custom */,
-				2D4C499620D5A3570007B828 /* extension */,
 				2D1A3EAE20D14FCC003F1ABB /* AppDelegate.swift */,
-				2D1A3EB020D14FCC003F1ABB /* WelcomeController.swift */,
+				2D4C499C20D5B2720007B828 /* fonts */,
+				2D4C499620D5A3570007B828 /* extension */,
+				2D4C499920D5AF560007B828 /* custom */,
+				2D4C49A720D5C8D40007B828 /* controllers */,
 				2D1A3EB820D14FCD003F1ABB /* Assets.xcassets */,
 				2D1A3EBA20D14FCD003F1ABB /* LaunchScreen.storyboard */,
 				2D1A3EBD20D14FCD003F1ABB /* Info.plist */,
 				2D1A3EB520D14FCC003F1ABB /* GetItDone.xcdatamodeld */,
-				2D4C49A320D5C5710007B828 /* ListController.swift */,
 			);
 			path = GetItDone;
 			sourceTree = "<group>";
@@ -86,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				2D4C499720D5A3720007B828 /* extension.swift */,
+				2D4C49A820D5CE2E0007B828 /* optionset.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -96,6 +100,7 @@
 				2D1A3EC320D1F590003F1ABB /* GDGradient.swift */,
 				2D4C499A20D5AF7E0007B828 /* GDLabel.swift */,
 				2D4C49A120D5BED40007B828 /* GDButton.swift */,
+				2D4C49A520D5C70B0007B828 /* GDHeaderView.swift */,
 			);
 			path = custom;
 			sourceTree = "<group>";
@@ -107,6 +112,15 @@
 				2D4C499D20D5B37C0007B828 /* Raleway-v4020-Regular.otf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		2D4C49A720D5C8D40007B828 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2D1A3EB020D14FCC003F1ABB /* WelcomeController.swift */,
+				2D4C49A320D5C5710007B828 /* ListController.swift */,
+			);
+			path = controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +201,8 @@
 				2D1A3EB720D14FCC003F1ABB /* GetItDone.xcdatamodeld in Sources */,
 				2D4C499B20D5AF7E0007B828 /* GDLabel.swift in Sources */,
 				2D4C499820D5A3720007B828 /* extension.swift in Sources */,
+				2D4C49A620D5C70B0007B828 /* GDHeaderView.swift in Sources */,
+				2D4C49A920D5CE2E0007B828 /* optionset.swift in Sources */,
 				2D1A3EAF20D14FCC003F1ABB /* AppDelegate.swift in Sources */,
 				2D4C49A420D5C5710007B828 /* ListController.swift in Sources */,
 			);
