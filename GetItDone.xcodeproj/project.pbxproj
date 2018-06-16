@@ -13,6 +13,8 @@
 		2D1A3EB920D14FCD003F1ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1A3EB820D14FCD003F1ABB /* Assets.xcassets */; };
 		2D1A3EBC20D14FCD003F1ABB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D1A3EBA20D14FCD003F1ABB /* LaunchScreen.storyboard */; };
 		2D1A3EC420D1F590003F1ABB /* GDGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3EC320D1F590003F1ABB /* GDGradient.swift */; };
+		2D4C499820D5A3720007B828 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4C499720D5A3720007B828 /* extension.swift */; };
+		2D4C499B20D5AF7E0007B828 /* GDLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4C499A20D5AF7E0007B828 /* GDLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		2D1A3EBB20D14FCD003F1ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D1A3EBD20D14FCD003F1ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D1A3EC320D1F590003F1ABB /* GDGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDGradient.swift; sourceTree = "<group>"; };
+		2D4C499720D5A3720007B828 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		2D4C499A20D5AF7E0007B828 /* GDLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,33 @@
 		2D1A3EAD20D14FCC003F1ABB /* GetItDone */ = {
 			isa = PBXGroup;
 			children = (
+				2D4C499920D5AF560007B828 /* custom */,
+				2D4C499620D5A3570007B828 /* extension */,
 				2D1A3EAE20D14FCC003F1ABB /* AppDelegate.swift */,
 				2D1A3EB020D14FCC003F1ABB /* WelcomeController.swift */,
 				2D1A3EB820D14FCD003F1ABB /* Assets.xcassets */,
 				2D1A3EBA20D14FCD003F1ABB /* LaunchScreen.storyboard */,
 				2D1A3EBD20D14FCD003F1ABB /* Info.plist */,
 				2D1A3EB520D14FCC003F1ABB /* GetItDone.xcdatamodeld */,
-				2D1A3EC320D1F590003F1ABB /* GDGradient.swift */,
 			);
 			path = GetItDone;
+			sourceTree = "<group>";
+		};
+		2D4C499620D5A3570007B828 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				2D4C499720D5A3720007B828 /* extension.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		2D4C499920D5AF560007B828 /* custom */ = {
+			isa = PBXGroup;
+			children = (
+				2D1A3EC320D1F590003F1ABB /* GDGradient.swift */,
+				2D4C499A20D5AF7E0007B828 /* GDLabel.swift */,
+			);
+			path = custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +162,8 @@
 				2D1A3EC420D1F590003F1ABB /* GDGradient.swift in Sources */,
 				2D1A3EB120D14FCC003F1ABB /* WelcomeController.swift in Sources */,
 				2D1A3EB720D14FCC003F1ABB /* GetItDone.xcdatamodeld in Sources */,
+				2D4C499B20D5AF7E0007B828 /* GDLabel.swift in Sources */,
+				2D4C499820D5A3720007B828 /* extension.swift in Sources */,
 				2D1A3EAF20D14FCC003F1ABB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
