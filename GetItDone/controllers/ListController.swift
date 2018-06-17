@@ -8,9 +8,14 @@
 
 import UIKit
 
-class ListController:UIViewController {
+class ListController: UIViewController, GDHeaderDelegate {
     
     let header = GDHeaderView(title: "Stuff to get done", subTitle: "4 left")
+    
+    // since we inherit GDHeaderDelegate, we should implement the addItem function in GDHeaderDelegate
+    func addItem(){
+        print("trying to add item from header")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +27,7 @@ class ListController:UIViewController {
         header.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         header.heightAnchor.constraint(equalToConstant: 120).isActive = true
         
-        
-        
+        header.delegate = self
     }
 }
 

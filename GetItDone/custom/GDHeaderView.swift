@@ -14,6 +14,7 @@ class GDHeaderView:UIView {
     let titleLabel = GDLabel(size: 14)
     let subTitleLabel = GDLabel(size: 24)
     let addButton = GDButton(title: "+", type: .squareIcon)
+    var delegate:GDHeaderDelegate?
     
     init(frame: CGRect = .zero, title:String = "header title", subTitle:String = "header subtitle") {
         super.init(frame: frame)
@@ -24,6 +25,7 @@ class GDHeaderView:UIView {
         self.titleLabel.text = title
         self.subTitleLabel.text = subTitle
         setupLayout()
+        
     }
     
     func setupLayout(){
@@ -49,8 +51,15 @@ class GDHeaderView:UIView {
         addButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -20 - 8).isActive = true
         addButton.heightAnchor.constraint(equalToConstant: 24).isActive = true
         addButton.widthAnchor.constraint(equalToConstant: 24).isActive = true
+        
+        addButton.addTarget(self, action: #selector(self.handleAddButton), for: .touchUpInside)
     }
     
+    @objc func handleAddButton(){
+        if let delegate = self.delegate{
+            delegate.addItem()
+        }
+    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
