@@ -21,6 +21,7 @@ class WelcomeController: UIViewController {
     let titleLabel = GDLabel(title: "GET IT DONE",size: 24, textAlign: .center)
     
    // let infoLabel = GDLabel(title: "WELCOME. GET IT DONE IS A TO DO LIST.\nA REALLY DOPE TO-DO-LIST.", size: 14, textAlign: .center)
+    
     let infoLabel:UILabel = {
         let label = GDLabel(title: "WELCOME. GET IT DONE IS A TO DO LIST.\nA REALLY DOPE TO-DO-LIST.", size: 14, textAlign: .center)
         

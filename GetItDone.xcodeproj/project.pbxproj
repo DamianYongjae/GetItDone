@@ -22,6 +22,8 @@
 		2D4C49A620D5C70B0007B828 /* GDHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4C49A520D5C70B0007B828 /* GDHeaderView.swift */; };
 		2D4C49A920D5CE2E0007B828 /* optionset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4C49A820D5CE2E0007B828 /* optionset.swift */; };
 		2D4C49AB20D6E8CC0007B828 /* protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4C49AA20D6E8CC0007B828 /* protocol.swift */; };
+		2D4C49AD20D6EE6B0007B828 /* GDNewItemPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4C49AC20D6EE6B0007B828 /* GDNewItemPopup.swift */; };
+		2D4C49AF20D6F5790007B828 /* GDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4C49AE20D6F5790007B828 /* GDTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		2D4C49A520D5C70B0007B828 /* GDHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDHeaderView.swift; sourceTree = "<group>"; };
 		2D4C49A820D5CE2E0007B828 /* optionset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = optionset.swift; sourceTree = "<group>"; };
 		2D4C49AA20D6E8CC0007B828 /* protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocol.swift; sourceTree = "<group>"; };
+		2D4C49AC20D6EE6B0007B828 /* GDNewItemPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDNewItemPopup.swift; sourceTree = "<group>"; };
+		2D4C49AE20D6F5790007B828 /* GDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				2D4C499A20D5AF7E0007B828 /* GDLabel.swift */,
 				2D4C49A120D5BED40007B828 /* GDButton.swift */,
 				2D4C49A520D5C70B0007B828 /* GDHeaderView.swift */,
+				2D4C49AC20D6EE6B0007B828 /* GDNewItemPopup.swift */,
+				2D4C49AE20D6F5790007B828 /* GDTextField.swift */,
 			);
 			path = custom;
 			sourceTree = "<group>";
@@ -204,6 +210,8 @@
 				2D1A3EB720D14FCC003F1ABB /* GetItDone.xcdatamodeld in Sources */,
 				2D4C499B20D5AF7E0007B828 /* GDLabel.swift in Sources */,
 				2D4C499820D5A3720007B828 /* extension.swift in Sources */,
+				2D4C49AF20D6F5790007B828 /* GDTextField.swift in Sources */,
+				2D4C49AD20D6EE6B0007B828 /* GDNewItemPopup.swift in Sources */,
 				2D4C49A620D5C70B0007B828 /* GDHeaderView.swift in Sources */,
 				2D4C49A920D5CE2E0007B828 /* optionset.swift in Sources */,
 				2D4C49AB20D6E8CC0007B828 /* protocol.swift in Sources */,
