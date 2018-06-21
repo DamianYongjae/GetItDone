@@ -21,19 +21,20 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
     
     let header = GDHeaderView(title: "Stuff to get done", subTitle: "4 left")
     let popup = GDNewItemPopup()
+    let tbInset:CGFloat = 16
     
-    let bg:UIView = {
+    lazy var bg:UIView = {
         let view = GDGradient()
         
         view.backgroundColor = .cyan
-        view.layer.cornerRadius = 24
+        view.layer.cornerRadius = tbInset
         return view
     }()
     
     let listTable = GDTableView()
     let CELL_ID = "cell_id"
     
-    var listData = ["first","hey","good"]
+    var listData:[ToDo] = [ToDo]()
     
     var keyboardHeight:CGFloat = 333
     
@@ -57,6 +58,12 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
         super.viewDidLoad()
         view.backgroundColor = .white
         
+        listData = [
+            ToDo(id: 0, title: "first", status: false),
+            ToDo(id: 1, title: "second", status: true),
+            ToDo(id: 2, title: "third", status: false)
+        
+        ]
         
         
         view.addSubview(header)
@@ -72,10 +79,10 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
         bg.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         
         view.addSubview(listTable)
-        listTable.leftAnchor.constraint(equalTo: bg.leftAnchor, constant: 8).isActive = true
-        listTable.topAnchor.constraint(equalTo: bg.topAnchor, constant: 8).isActive = true
-        listTable.bottomAnchor.constraint(equalTo: bg.bottomAnchor, constant: -8).isActive = true
-        listTable.rightAnchor.constraint(equalTo: bg.rightAnchor, constant: -8).isActive = true
+        listTable.leftAnchor.constraint(equalTo: bg.leftAnchor, constant: tbInset).isActive = true
+        listTable.topAnchor.constraint(equalTo: bg.topAnchor, constant: tbInset).isActive = true
+        listTable.bottomAnchor.constraint(equalTo: bg.bottomAnchor, constant: tbInset * -1).isActive = true
+        listTable.rightAnchor.constraint(equalTo: bg.rightAnchor, constant: tbInset * -1).isActive = true
         
         view.addSubview(popup)
         popup.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
@@ -110,16 +117,84 @@ extension ListController: UITextFieldDelegate{
     }
 }
 
-extension ListController: UITableViewDelegate, UITableViewDataSource {
+extension ListController: UITableViewDelegate, UITableViewDataSource, GDListCellDelegate {
+    
+    func toggleToDo(id: Int, status: Bool) {
+        let newListData = self.listData.map { (toDo) -> ToDo in
+            if toDo.id == id {
+                var newToDo = toDo
+                newToDo.status = status
+                return newToDo
+            }
+            return toDo
+        }
+        self.listData = newListData
+        self.listTable.reloadData()
+        
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "To Do"
+        }
+        return "Done"
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let titleForHeader = GDLabel( color: .white, size: 20, frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 44))
+        
+        if section == 0 {
+            titleForHeader.text = "To Do"
+        }else {
+            titleForHeader.text = "Done"
+        }
+        
+        return titleForHeader
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 38
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.listData.count
+        var count = 0
+        self.listData.forEach { (toDo) in
+            if section == 0 && toDo.status == false{
+                count += 1
+            }else if section == 1 && toDo.status == true {
+                count += 1
+            }
+        }
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath) as! GDListCell
-        cell.textLabel?.text = self.listData[indexPath.row]
+//        cell.textLabel?.text = self.listData[indexPath.row].title
+        
+        cell.box.delegate = self
+        var itemsForSection:[ToDo] = []
+        self.listData.forEach { (toDo) in
+            if indexPath.section == 0 && toDo.status == false{
+                itemsForSection.append(toDo)
+            }else if indexPath.section == 1 && toDo.status == true {
+                itemsForSection.append(toDo)
+            }
+        }
+        
+       // cell.toDo = self.listData[indexPath.row]
+        cell.toDo = itemsForSection[indexPath.row]
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 42
     }
     
     

@@ -28,8 +28,7 @@ class GDButton: UIButton {
     }
     
     func phaseTwo(){
-        self.setTitle(self.title, for: .normal)
-        self.backgroundColor = .white
+        
         self.setTitleColor(.grayZero, for: .normal)
         if let titleLabel = self.titleLabel {
             titleLabel.font = UIFont(name: "Raleway-v4020-Regular", size: 16)
@@ -46,14 +45,15 @@ class GDButton: UIButton {
     
     //phase two initializer
     func roundedText() {
+        self.setTitle(self.title, for: .normal)
+        self.backgroundColor = .white
         self.layer.cornerRadius = self.radius
     }
     
     func squareIcon(){
         //this is where we will set the custom icon
-        if let titleLabel = self.titleLabel {
-            titleLabel.font = UIFont(name: "Raleway-v4020-Regular", size: 24)
-        }
+        self.setImage(UIImage(named:"add-icon"), for: .normal)
+        self.backgroundColor = .white
     }
     
     required init?(coder aDecoder: NSCoder) {

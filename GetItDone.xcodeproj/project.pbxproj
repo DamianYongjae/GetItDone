@@ -26,6 +26,8 @@
 		2D4C49AF20D6F5790007B828 /* GDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4C49AE20D6F5790007B828 /* GDTextField.swift */; };
 		2D4C49B320D7278B0007B828 /* GDTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4C49B220D7278B0007B828 /* GDTableView.swift */; };
 		2D4C49B520D7302A0007B828 /* GDLIstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4C49B420D7302A0007B828 /* GDLIstCell.swift */; };
+		2D4C49BB20D731920007B828 /* toDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4C49BA20D731920007B828 /* toDo.swift */; };
+		2D4C49BD20D73BE60007B828 /* GDCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4C49BC20D73BE60007B828 /* GDCheckbox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		2D4C49AE20D6F5790007B828 /* GDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDTextField.swift; sourceTree = "<group>"; };
 		2D4C49B220D7278B0007B828 /* GDTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDTableView.swift; sourceTree = "<group>"; };
 		2D4C49B420D7302A0007B828 /* GDLIstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDLIstCell.swift; sourceTree = "<group>"; };
+		2D4C49BA20D731920007B828 /* toDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDo.swift; sourceTree = "<group>"; };
+		2D4C49BC20D73BE60007B828 /* GDCheckbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDCheckbox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 		2D1A3EAD20D14FCC003F1ABB /* GetItDone */ = {
 			isa = PBXGroup;
 			children = (
+				2D4C49B720D731570007B828 /* model */,
 				2D1A3EAE20D14FCC003F1ABB /* AppDelegate.swift */,
 				2D4C499C20D5B2720007B828 /* fonts */,
 				2D4C499620D5A3570007B828 /* extension */,
@@ -116,6 +121,7 @@
 				2D4C49AE20D6F5790007B828 /* GDTextField.swift */,
 				2D4C49B220D7278B0007B828 /* GDTableView.swift */,
 				2D4C49B420D7302A0007B828 /* GDLIstCell.swift */,
+				2D4C49BC20D73BE60007B828 /* GDCheckbox.swift */,
 			);
 			path = custom;
 			sourceTree = "<group>";
@@ -136,6 +142,14 @@
 				2D4C49A320D5C5710007B828 /* ListController.swift */,
 			);
 			path = controllers;
+			sourceTree = "<group>";
+		};
+		2D4C49B720D731570007B828 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				2D4C49BA20D731920007B828 /* toDo.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,7 +235,9 @@
 				2D4C49AD20D6EE6B0007B828 /* GDNewItemPopup.swift in Sources */,
 				2D4C49B320D7278B0007B828 /* GDTableView.swift in Sources */,
 				2D4C49A620D5C70B0007B828 /* GDHeaderView.swift in Sources */,
+				2D4C49BB20D731920007B828 /* toDo.swift in Sources */,
 				2D4C49A920D5CE2E0007B828 /* optionset.swift in Sources */,
+				2D4C49BD20D73BE60007B828 /* GDCheckbox.swift in Sources */,
 				2D4C49AB20D6E8CC0007B828 /* protocol.swift in Sources */,
 				2D1A3EAF20D14FCC003F1ABB /* AppDelegate.swift in Sources */,
 				2D4C49A420D5C5710007B828 /* ListController.swift in Sources */,
